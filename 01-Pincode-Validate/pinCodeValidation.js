@@ -1,7 +1,7 @@
 function validatePinCode(pinCode) {
     
-    // UC-02 : Starts with digit 1-9
-    const pinCodePattern = /^[1-9][0-9]{5}$/;
+    // UC-04 : Make sure 400 088 is also valid along with 400088
+    const pinCodePattern = /^[0-9]{3}\s?[0-9]{3}$/;
 
     if (pinCodePattern.test(pinCode)) {
         console.log("Valid PIN code");
@@ -11,5 +11,6 @@ function validatePinCode(pinCode) {
 }
 
 // Example usage
+validatePinCode("400 088");
 validatePinCode("400088");  
-validatePinCode("400088B"); // false
+validatePinCode("400-088"); // false
