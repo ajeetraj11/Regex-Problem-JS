@@ -1,5 +1,5 @@
 function validateEmail(email) {
-  // UC3 - Ensure “.” after bridgelabz and validate the mandatory 3rd part 
+  // UC4 - Optional part like xyz with valid special characters before it
   const pattern =
      /^abc([._+-][a-z]+)?@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;;
   return pattern.test(email);
