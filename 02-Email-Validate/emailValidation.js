@@ -1,7 +1,7 @@
 function validateEmail(email) {
-  // UC2 - Ensure '@' and valid domain part
+  // UC3 - Ensure “.” after bridgelabz and validate the mandatory 3rd part 
   const pattern =
-    /^abc([._+-][a-z]+)?@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})?$/;
+     /^abc([._+-][a-z]+)?@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;;
   return pattern.test(email);
 }
 
