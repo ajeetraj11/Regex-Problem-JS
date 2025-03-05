@@ -1,7 +1,7 @@
 function validateEmail(email) {
-  // UC1 - Initial regex
+  // UC2 - Ensure '@' and valid domain part
   const pattern =
-    /^abc(\.[a-z]+)?@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/;
+    /^abc([._+-][a-z]+)?@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})?$/;
   return pattern.test(email);
 }
 
@@ -12,6 +12,13 @@ const emails = [
   "abc.xyz@bridgelabz.co.in",
   "xyz@bridgelabz.co",
   "abc@co",
+  "abc@bridgelabz",
+  "abc@company",
+  "abc.xyz@domain",
+  "abc-xyz@domain123",
+  "abc@123domain",
+  "abc@",
+  "abc@.com",
 ];
 
 emails.forEach((email) => {
