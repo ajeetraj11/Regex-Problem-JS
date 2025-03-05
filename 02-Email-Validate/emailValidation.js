@@ -1,7 +1,7 @@
 function validateEmail(email) {
-  // UC4 - Optional part like xyz with valid special characters before it
+  // UC5 - Final regex with optional TLD of exactly two characters
   const pattern =
-     /^abc([._+-][a-z]+)?@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;;
+    /^abc([._+-][a-zA-Z0-9]+)?@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2})?$/;
   return pattern.test(email);
 }
 
