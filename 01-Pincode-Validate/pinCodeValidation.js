@@ -12,4 +12,4 @@ function validatePinCode(pinCode) {
 
 // Example usage
 validatePinCode("400088");  
-validatePinCode("A400088"); // false
+validatePinCode("400088B"); // false
