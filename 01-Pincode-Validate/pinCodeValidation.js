@@ -1,7 +1,7 @@
 function validatePinCode(pinCode) {
     
-    // UC1 : Regex pattern to validate a 6-digit Indian PIN code
-    const pinCodePattern = /^[0-9]{6}$/;
+    // UC-02 : Starts with digit 1-9
+    const pinCodePattern = /^[1-9][0-9]{5}$/;
 
     if (pinCodePattern.test(pinCode)) {
         console.log("Valid PIN code");
@@ -12,4 +12,4 @@ function validatePinCode(pinCode) {
 
 // Example usage
 validatePinCode("400088");  
-validatePinCode("002244"); 
+validatePinCode("A400088"); // false
